@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Person API
+  description: APIs for Person microservice
+    <a href="https://docs.google.com/document/d/1ZtuKrcqep_FIfSJ6D2Dzy36oy4TyP4ugfy6QP2wE5XA/edit?usp=sharing">General Guidelines</a>
+paths:
+  /api/1.0/persons/:
+    $ref: 'paths/persons/persons.yml'
+  /api/1.0/persons/{pin}:
+    $ref: 'paths/persons/persons_pin.yml'
+  /api/1.0/persons/{pin}/educations:
+    $ref: 'paths/persons/educations.yml'
+  /api/1.0/persons/{pin}/phones:
+    $ref: 'paths/persons/phones.yml'
+  /api/1.0/persons/{pin}/phones/{id}:
+    $ref: 'paths/persons/phones_id.yml'
+  /api/1.0/persons/{pin}/relatives:
+    $ref: 'paths/persons/relatives.yml'
+  /api/1.0/persons/{pin}/otherInfo:
+    $ref: 'paths/persons/otherInfo.yml'
+components:
+  schemas:
+    Person:
+      $ref: 'components/person.yml'
+    Phone:
+      $ref: 'components/phone.yml'
+    Education:
+      $ref: 'components/education.yml'

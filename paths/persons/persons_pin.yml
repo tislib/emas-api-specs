@@ -1,0 +1,51 @@
+get:
+  tags:
+    - Persons
+  summary: Gets person by pin
+  description: >
+    Gets a person by pin
+  operationId: getPersonByPin
+  parameters:
+    - name: pin
+      in: path
+      description: Pin
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../../components/person.yml'
+put:
+  tags:
+    - Persons
+  summary: Update Person by pin
+  description: >
+    Update person by pin
+  operationId: updatePerson
+  parameters:
+    - name: pin
+      in: path
+      description: Person PIN
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Optional description in *Markdown*
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/person.yml'
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/person.yml'

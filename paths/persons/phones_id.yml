@@ -1,0 +1,85 @@
+get:
+  tags:
+    - Persons > Phones
+  summary: Get Person phone number
+  description: >
+    Get Person phone number
+  operationId: getPersonPhoneNumberByPinAndPhoneId
+  parameters:
+    - name: pin
+      in: path
+      description: Pin
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: Phone ID
+      required: true
+      schema:
+        type: number
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../../components/phone.yml'
+put:
+  tags:
+    - Persons > Phones
+  summary: Update Person phone number
+  description: >
+    Update Person phone number
+  operationId: updatePersonPhoneNumberByPinAndPhoneId
+  parameters:
+    - name: pin
+      in: path
+      description: Pin
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: Phone ID
+      required: true
+      schema:
+        type: number
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/phone.yml'
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/phone.yml'
+delete:
+  tags:
+    - Persons > Phones
+  summary: Delete Person phone number
+  description: >
+    Delete Person phone number
+  operationId: deletePersonPhoneNumberByPinAndPhoneId
+  parameters:
+    - name: pin
+      in: path
+      description: Pin
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: Phone ID
+      required: true
+      schema:
+        type: number
+  responses:
+    '204':
+      description: Successful operation

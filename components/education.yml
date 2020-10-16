@@ -1,0 +1,25 @@
+type: object
+properties:
+  id:
+    type: number
+    format: int64
+  educationType:
+    type: string
+    enum: [BACHELOR, MASTER, PHD, PRIMARY, MIDDLE]
+  institution:
+    $ref: 'institution.yml'
+  faculty:
+    $ref: 'faculty.yml'
+  speciality:
+    $ref: 'speciality.yml'
+  diploma:
+    type: object
+    properties:
+      no:
+        type: string
+      givenDate:
+        type: string
+        format: date
+      approverNo:
+        type: string
+
