@@ -1,0 +1,21 @@
+get:
+  tags:
+    - Persons > Other Info
+  summary: Get person other information
+  description: >
+    Get person other information
+  operationId: getPersonOtherInfoByPin
+  parameters:
+    - name: pin
+      in: path
+      description: Pin
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/otherInfo.yml'

@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Persons > Relatives
+  summary: Gets person education informations
+  description: >
+    Gets a person by pin
+  operationId: getPersonRelativesByPin
+  parameters:
+    - name: pin
+      in: path
+      description: Pin
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../../components/relative.yml'

@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    type: number
+    format: int64
+  number:
+    type: string
+    pattern: '+994(\d{2})(\d{7})'
+    example: '+994515555555'
+    description: 'Phone Number, only Azerbaijan numbers are allowed'
+  numberType:
+    type: string
+    enum: [MOBILE, HOME, OTHER]
+    example: MOBILE
+  isCurrent:
+    type: boolean
+    description: 'Is current is a flag to identify default phone number for given numberType,
+    for each numberType only one isCurrent phone number is allowed with true value'

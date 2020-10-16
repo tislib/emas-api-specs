@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    type: number
+    format: int64
+  relType:
+    type: string
+    enum: [SISTER, BROTHER, MOTHER, FATHER]
+  person:
+    $ref: 'person.yml'

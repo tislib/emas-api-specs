@@ -1,0 +1,54 @@
+type: object
+properties:
+  pin:
+    type: string
+    format: uuid
+  name:
+    type: string
+  surname:
+    type: string
+  patronymic:
+    type: string
+  birthdate:
+    type: string
+    format: date
+  birthPlace:
+    type: string
+  gender:
+    type: string
+    enum: [ MALE, FEMALE ]
+  idCardSerial:
+    type: string
+  idCardNumber:
+    type: string
+  idCardIssuedDate:
+    type: string
+    format: date
+  idCardIssuedBy:
+    type: string
+  party:
+    type: string
+  currentlyAddress:
+    type: string
+  registeredAddress:
+    type: string
+  nationality:
+    type: string
+  citizenship:
+    type: string
+  email:
+    type: string
+    description: default email address
+  militaryState:
+    type: string
+  eyeColor:
+    type: string
+  martialStatus:
+    type: string
+    enum: [ SINGLE, MARRIER, DIVORCED, WIDOWED ]
+  height:
+    type: number
+    description: Height must use cm unit
+  bloodGroup:
+    type: string
+    enum: [ O, A, B, AB, O_NEG, A_NEG, B_NEG, AB_NEG ]
