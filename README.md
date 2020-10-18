@@ -6,4 +6,3 @@ Run swagger UI locally:
 
 Linux:
 sh run.sh
-
